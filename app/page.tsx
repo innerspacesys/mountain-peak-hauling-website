@@ -121,37 +121,55 @@ export default function HomePage() {
               <div className={styles.serviceCard}>
                 <div className={styles.serviceIcon}><Truck /></div>
                 <h3>Dump Trailer Rental</h3>
-                <p>Need to haul debris yourself? Rent our dump trailer by the day or week.</p>
+                <p>Need to haul debris yourself? Rent our dump trailer by the day or week. Perfect for DIY projects and renovations.</p>
               </div>
 
               <div className={styles.serviceCard}>
                 <div className={styles.serviceIcon}><Home /></div>
                 <h3>Home Cleanouts</h3>
-                <p>Moving, downsizing, or handling an estate? We'll clear out your property.</p>
+                <p>Moving, downsizing, or handling an estate? We'll clear out your entire property quickly and respectfully.</p>
               </div>
 
               <div className={styles.serviceCard}>
                 <div className={styles.serviceIcon}><Trash2 /></div>
                 <h3>Junk & Trash Removal</h3>
-                <p>Old furniture, appliances, yard waste, construction debris—we haul it all.</p>
+                <p>Old furniture, appliances, yard waste, construction debris—we haul it all. Same-day service available.</p>
               </div>
 
               <div className={styles.serviceCard}>
                 <div className={styles.serviceIcon}><Recycle /></div>
                 <h3>Scrap Metal Pick-Up</h3>
-                <p>Got scrap metal? We'll pick it up and dispose of it properly.</p>
+                <p>Got scrap metal lying around? We'll pick it up and dispose of it properly. Free pickup for large loads.</p>
               </div>
 
               <div className={styles.serviceCard}>
                 <div className={styles.serviceIcon}><Caravan /></div>
                 <h3>Camper Relocation</h3>
-                <p>Need to move a camper or trailer? We handle local relocations safely.</p>
+                <p>Need to move a camper or trailer? We handle local relocations safely and efficiently.</p>
               </div>
 
               <div className={styles.serviceCard}>
                 <div className={styles.serviceIcon}><Truck /></div>
                 <h3>Hauling Earth Materials</h3>
-                <p>Topsoil, mulch, dirt, gravel delivered or removed.</p>
+                <p>Need topsoil, mulch, dirt, or gravel delivered or removed? We handle bulk earth material transport for landscaping, construction, and property development projects.</p>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}><Truck /></div>
+                <h3>Small Building Demo</h3>
+                <p>From storage sheds to small structures, we safely demolish and haul away the debris. Licensed and experienced with proper disposal procedures.</p>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}><Truck /></div>
+                <h3>Furniture, mattress, and appliance pickup and disposal</h3>
+                <p>Unwanted furniture, old mattresses, and broken appliances taking up space? We haul them away and dispose of them responsibly.</p>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}><Truck /></div>
+                <h3>Brush Cleanup and Removal</h3>
+                <p>Tree branches, yard waste, and brush piling up? We'll clear it all out, chip oversized items, and haul away the debris.</p>
               </div>
             </div>
           </div>
