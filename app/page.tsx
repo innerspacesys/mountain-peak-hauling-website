@@ -9,8 +9,8 @@ export default function HomePage() {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <div className={styles.logo}>
-            <Truck className={styles.logoIcon} />
-            <span className={styles.businessName}>Mountain Peak Hauling</span>
+            <img src="logo.png" alt="Mountain Peak Hauling Logo" width="50px" height="50px" />
+            <span className={styles.businessName}>Mountain Peak Hauling & Junk Removal</span>
           </div>
           <nav className={styles.nav}>
             <a href="#services">Services</a>
@@ -95,6 +95,48 @@ export default function HomePage() {
                   Need to move a camper or trailer? We handle local relocations safely and efficiently.
                 </p>
               </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>
+                  <Truck />
+                </div>
+                <h3>Hauling Earth Materials</h3>
+                <p>
+                  Temporary description
+                </p>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>
+                  <Truck />
+                </div>
+                <h3>Small Building Demo</h3>
+                <p>
+                  Temporary description
+                </p>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>
+                  <Truck />
+                </div>
+                <h3>Furniture, mattress, and appliance pickup and disposal</h3>
+                <p>
+                  Temporary description
+                </p>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>
+                  <Truck />
+                </div>
+                <h3>Brush Cleanup and Removal</h3>
+                <p>
+                  Temporary description
+                </p>
+              </div>
+
+
             </div>
           </div>
         </section>

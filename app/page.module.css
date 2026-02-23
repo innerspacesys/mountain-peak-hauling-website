@@ -9,7 +9,7 @@
 .header {
   position: sticky;
   top: 0;
-  background: #ffffff;
+  background: #1f2227;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
   padding: 1rem 0;
@@ -40,7 +40,7 @@
 .businessName {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
 }
 
 .nav {
@@ -49,7 +49,7 @@
 }
 
 .nav a {
-  color: #374151;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
@@ -61,7 +61,7 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  background: #363B43;
   color: white;
   padding: 5rem 1.5rem;
   text-align: center;
@@ -253,7 +253,7 @@
 
 /* Footer */
 .footer {
-  background: #1f2937;
+  background: #1F2227;
   color: white;
   padding: 3rem 1.5rem;
   margin-top: auto;
