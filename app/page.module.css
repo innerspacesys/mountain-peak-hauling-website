@@ -16,12 +16,14 @@
 }
 
 .headerContent {
+  position: relative; /* ✅ anchors the mobile dropdown */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .logo {
@@ -29,23 +31,23 @@
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-}
-
-.logoIcon {
-  width: 32px;
-  height: 32px;
-  color: #2563eb;
+  min-width: 0;
 }
 
 .businessName {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Desktop nav default */
 .nav {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav a {
@@ -59,9 +61,30 @@
   color: #2563eb;
 }
 
+/* Hamburger button default hidden */
+.mobileMenuButton {
+  display: none !important;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.mobileMenuButton svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Mobile dropdown default hidden */
+.mobileNav {
+  display: none;
+}
+
 /* Hero Section */
 .hero {
-  background: #363B43;
+  background: #363b43;
   color: white;
   padding: 5rem 1.5rem;
   text-align: center;
@@ -128,10 +151,26 @@
   text-decoration: none;
 }
 
-/* Services Section */
+/* Sections */
 .services {
   padding: 5rem 1.5rem;
   background: #f9fafb;
+}
+
+.about {
+  padding: 5rem 1.5rem;
+  background: white;
+}
+
+.contact {
+  padding: 5rem 1.5rem;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.gallery {
+  padding: 5rem 1.5rem;
+  background: white;
 }
 
 .sectionContent {
@@ -158,12 +197,6 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.serviceCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .serviceIcon {
@@ -186,12 +219,6 @@
   font-size: 1rem;
 }
 
-/* About Section */
-.about {
-  padding: 5rem 1.5rem;
-  background: white;
-}
-
 .aboutContent {
   max-width: 800px;
   margin: 0 auto;
@@ -202,13 +229,6 @@
   line-height: 1.8;
   color: #374151;
   margin-bottom: 1.5rem;
-}
-
-/* Contact Section */
-.contact {
-  padding: 5rem 1.5rem;
-  background: #f9fafb;
-  text-align: center;
 }
 
 .contactSubtitle {
@@ -233,11 +253,6 @@
   font-weight: 600;
   color: #2563eb;
   text-decoration: none;
-  transition: color 0.2s;
-}
-
-.contactLink:hover {
-  color: #1e40af;
 }
 
 .contactLink svg {
@@ -251,9 +266,89 @@
   margin-top: 2rem;
 }
 
+/* Gallery */
+.galleryDescription {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Gallery controls are desktop-friendly by default */
+.carouselContainer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.carouselStage {
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* ✅ Show full image, never crop */
+.carouselImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.carouselButton {
+  background: #1f2227;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.carouselButton:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #d1d5db;
+  border: none;
+  cursor: pointer;
+}
+
+.activeDot {
+  background: #2563eb;
+  width: 14px;
+  height: 14px;
+}
+
 /* Footer */
 .footer {
-  background: #1F2227;
+  background: #1f2227;
   color: white;
   padding: 3rem 1.5rem;
   margin-top: auto;
@@ -271,17 +366,19 @@
   margin-bottom: 0.75rem;
 }
 
-.footerContact {
+.footerLinks {
   margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.footerLinks a {
+  color: #93c5fd;
+  text-decoration: none;
 }
 
 .footerContact a {
   color: #93c5fd;
   text-decoration: none;
-}
-
-.footerContact a:hover {
-  color: #dbeafe;
 }
 
 .footerCopy {
@@ -315,31 +412,71 @@
   .serviceGrid {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .nav {
-    gap: 2.5rem;
-  }
 }
 
-/* Mobile navigation adjustments */
-@media (max-width: 639px) {
-  .businessName {
-    font-size: 1rem;
-  }
-
-  .logoIcon {
-    width: 28px;
-    height: 28px;
-  }
-
+/* ✅ MOBILE ONLY (phones): hamburger + stacked gallery buttons */
+@media (max-width: 640px) {
   .nav {
-    gap: 1rem;
+    display: none;
   }
 
-  .nav a {
-    font-size: 0.875rem;
+  .mobileMenuButton {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
   }
 
+  .mobileNav {
+    display: flex;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 12px;
+    right: 12px;
+    background: #1f2227;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: 101;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mobileNav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.9rem 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  .mobileNav a + a {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .businessName {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    .businessName {
+      white-space: normal;
+      line-height: 1.15;
+      font-size: 0.95rem;
+      max-width: 220px;
+    }
+
+    .headerContent {
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 42px;
+      height: 42px;
+    }
+
+  }
+  
   .heroTitle {
     font-size: 2rem;
   }
@@ -358,11 +495,21 @@
 
   .services,
   .about,
-  .contact {
+  .contact,
+  .gallery {
     padding: 3rem 1.5rem;
   }
 
-  .sectionTitle {
-    font-size: 1.75rem;
+  /* Stack gallery buttons under image */
+  .carouselContainer {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .carouselButton {
+    width: 100%;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 1.2rem;
   }
 }
