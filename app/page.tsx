@@ -9,7 +9,12 @@ import {
   Recycle,
   Caravan,
   Menu,
-  X
+  X,
+  TreePine,
+  Bed,
+  Warehouse,
+  Stone,
+  Hash
 } from 'lucide-react';
 import React, { useEffect, useMemo, useState } from 'react';
 import styles from './page.module.css';
@@ -98,21 +103,42 @@ export default function HomePage() {
 
       <main>
         <section className={styles.hero}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>Professional Hauling & Junk Removal</h1>
-            <p className={styles.heroSubtitle}>Serving Signal Mountain and surrounding areas</p>
-            <p className={styles.heroText}>
-              Fast, reliable service for homeowners and contractors. We handle everything from single items to full property cleanouts.
-            </p>
-            <a href="tel:7066713258" className={styles.ctaButton}>
-              <Phone className={styles.buttonIcon} />
-              Call or Text for a Free Quote
-            </a>
-            <p className={styles.phoneNumber}>
-              <a href="tel:7066713258">(706) 671-3258</a>
-            </p>
-          </div>
-        </section>
+  {/* Background Video */}
+  <video
+    className={styles.heroVideo}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+  >
+    <source src="/herovid.mp4" type="video/mp4" />
+  </video>
+
+  {/* Dark overlay */}
+  <div className={styles.heroOverlay} />
+
+  {/* Content */}
+  <div className={styles.heroContent}>
+    <h1 className={styles.heroTitle}>Professional Hauling & Junk Removal</h1>
+    <p className={styles.heroSubtitle}>
+      Serving Signal Mountain and surrounding areas
+    </p>
+    <p className={styles.heroText}>
+      Fast, reliable service for homeowners and contractors.
+      We handle everything from single items to full property cleanouts.
+    </p>
+
+    <a href="tel:7066713258" className={styles.ctaButton}>
+      <Phone className={styles.buttonIcon} />
+      Call or Text for a Free Quote
+    </a>
+
+    <p className={styles.phoneNumber}>
+      <a href="tel:7066713258">(706) 671-3258</a>
+    </p>
+  </div>
+</section>
 
         <section id="services" className={styles.services}>
           <div className={styles.sectionContent}>
@@ -149,25 +175,25 @@ export default function HomePage() {
               </div>
 
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}><Truck /></div>
+                <div className={styles.serviceIcon}><Stone /></div>
                 <h3>Hauling Earth Materials</h3>
                 <p>Need topsoil, mulch, dirt, or gravel delivered or removed? We handle bulk earth material transport for landscaping, construction, and property development projects.</p>
               </div>
 
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}><Truck /></div>
+                <div className={styles.serviceIcon}><Warehouse /></div>
                 <h3>Small Building Demo</h3>
                 <p>From storage sheds to small structures, we safely demolish and haul away the debris. Licensed and experienced with proper disposal procedures.</p>
               </div>
 
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}><Truck /></div>
+                <div className={styles.serviceIcon}><Bed /></div>
                 <h3>Furniture, mattress, and appliance pickup and disposal</h3>
                 <p>Unwanted furniture, old mattresses, and broken appliances taking up space? We haul them away and dispose of them responsibly.</p>
               </div>
 
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}><Truck /></div>
+                <div className={styles.serviceIcon}><TreePine /></div>
                 <h3>Brush Cleanup and Removal</h3>
                 <p>Tree branches, yard waste, and brush piling up? We'll clear it all out, chip oversized items, and haul away the debris.</p>
               </div>
@@ -219,8 +245,11 @@ export default function HomePage() {
           <div className={styles.sectionContent}>
             <h2 className={styles.sectionTitle}>About Us</h2>
             <div className={styles.aboutContent}>
+             <p>
+                Mountain Peak Hauling & Junk Removal is a locally owned and operated business serving Signal Mountain, TN and the surrounding areas. We're not a national franchise—we're your neighbors, and we take pride in keeping our community clean.
+              </p>
               <p>
-                Mountain Peak Hauling & Junk Removal is a locally owned and operated business serving Signal Mountain, TN and surrounding areas.
+                Whether you're a homeowner tackling a cleanout, a contractor with job site debris, or someone who just needs a single item hauled away, we're here to help. No job is too big or too small.
               </p>
               <p>
                 We show up on time, work hard, and charge fair prices. That's our promise to you.

@@ -84,22 +84,57 @@
 
 /* Hero Section */
 .hero {
-  background: #363b43;
-  color: white;
-  padding: 5rem 1.5rem;
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   text-align: center;
+  color: white;
 }
 
+/* Background video */
+.heroVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* fills container */
+  object-position: center;  /* keeps focus centered */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
+  /* lighter styling so motion is visible */
+  filter: brightness(0.75);  /* remove blur completely */
+}
+
+@keyframes slowZoom {
+  from { transform: translate(-50%, -50%) scale(1); }
+  to   { transform: translate(-50%, -50%) scale(1.05); }
+}
+
+/* Overlay layer */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Content sits above */
 .heroContent {
+  position: relative;
+  z-index: 2;
   max-width: 800px;
-  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .heroTitle {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  line-height: 1.2;
 }
 
 .heroSubtitle {
@@ -112,7 +147,6 @@
   font-size: 1.125rem;
   margin-bottom: 2rem;
   opacity: 0.9;
-  line-height: 1.6;
 }
 
 .ctaButton {
