@@ -30,7 +30,8 @@ export default function HomePage() {
       { src: '/gallery/fulltruck.png', alt: 'Full truck' },
       { src: '/gallery/fulltruckdump.png', alt: 'Full truck with dump trailer' },
       { src: '/gallery/fulltruckdump2.png', alt: 'Full truck with dump trailer 2' },
-      { src: '/gallery/pickupwithdump2.png', alt: 'Pickup truck with dump trailer 2' }
+      { src: '/gallery/pickupwithdump2.png', alt: 'Pickup truck with dump trailer 2' },
+      { src: '/gallery/graveldump.jpeg', alt: 'Gravel dumping out of trailer' }
     ],
     []
   );
